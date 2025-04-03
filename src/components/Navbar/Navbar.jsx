@@ -19,27 +19,25 @@ function Navbar() {
   };
 
   return (
-    <header>
-      <nav>
-        <div className="logo">MGTEC</div>
+      <nav className="NavBar">
         <ul>
           <li>
-            <button onClick={() => handleNavigation("home")}>Home</button>
+            <button className="NavBar__button" onClick={() => handleNavigation("home")}>Home</button>
           </li>
           <li>
-            <button onClick={() => handleNavigation("quem-somos")}>
+            <button className="NavBar__button" onClick={() => handleNavigation("quem-somos")}>
               Quem Somos
             </button>
           </li>
           <li>
-            <button onClick={() => handleNavigation("contato")}>Contato</button>
+            <button className="NavBar__button"  onClick={() => handleNavigation("contato")}>Contato</button>
           </li>
-          <li>
+          <li className="NavBar__button" >
             <Link to="/localizacao">Localização</Link>
           </li>
         </ul>
       </nav>
-    </header>
+
   );
 }
 
