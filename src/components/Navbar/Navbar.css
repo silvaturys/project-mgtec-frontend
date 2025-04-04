@@ -1,0 +1,57 @@
+.NavBar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .NavBar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .NavBar__button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    font-family: "Inter", sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  .NavBar__button:hover,
+  .NavBar__button a:hover {
+    color: #0044ff; 
+  }
+  
+  /* Linha animada ao passar o mouse */
+  .NavBar__button::after,
+  .NavBar__button a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #0077ff;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .NavBar__button:hover::after,
+  .NavBar__button a:hover::after {
+    width: 100%;
+  }
+  
+  /* Estilo para o link de localização */
+  .NavBar__button a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    padding: 5px;
+  }
+  

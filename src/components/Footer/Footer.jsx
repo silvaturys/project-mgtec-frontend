@@ -2,31 +2,31 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer id="contato">
+    <footer id="contato" className="footer">
       <h2>Entre em Contato</h2>
       <ul>
-        <li>
+        <li className="footer__email">
           📩 E-mail:{" "}
-          <a href="mailto:contato@mgtec.com.br">contato@mgtec.com.br</a>
+          <a href="mailto:contato@mgtecsolucoes.com.br">contato@mgtecsolucoes.com.br</a>
         </li>
-        <li>
+        <li className="footer__whatsapp">
           📱 WhatsApp:{" "}
           <a
-            href="https://wa.me/5599999999999"
+            href="https://wa.me/5548991069716"
             target="_blank"
             rel="noopener noreferrer"
           >
-            (99) 99999-9999
+            (48) 9 9106-9719
           </a>
         </li>
-        <li>
+        <li className="footer__instagram">
           📷 Instagram:{" "}
           <a
-            href="https://instagram.com/mgtec"
+            href="https://instagram.com/mgtec_solucoes"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @mgtec
+            @mgtec_solucoes
           </a>
         </li>
       </ul>
