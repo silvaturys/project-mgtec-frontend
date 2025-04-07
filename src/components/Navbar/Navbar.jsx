@@ -1,43 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Função para navegar para Home e depois rolar para a seção certa
   const handleNavigation = (id) => {
     if (location.pathname !== "/") {
-      navigate("/"); // Se estiver na página de Localização, volta para Home primeiro
+      navigate("/");
     }
     setTimeout(() => {
       const section = document.getElementById(id);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100); // Pequeno delay para garantir que a página carregue antes de rolar
+    }, 100);
+    setMenuOpen(false); // Fecha o menu após clicar
   };
 
   return (
-      <nav className="NavBar">
-        <ul>
-          <li>
-            <button className="NavBar__button" onClick={() => handleNavigation("home")}>Home</button>
-          </li>
-          <li>
-            <button className="NavBar__button" onClick={() => handleNavigation("quem-somos")}>
-              Quem Somos
-            </button>
-          </li>
-          <li>
-            <button className="NavBar__button"  onClick={() => handleNavigation("contato")}>Contato</button>
-          </li>
-          <li className="NavBar__button" >
-            <Link to="/localizacao">Localização</Link>
-          </li>
-        </ul>
-      </nav>
-
+    <nav className="NavBar">
+     <button
+  className="NavBar__hamburger"
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  {menuOpen ? "✕" : "☰"}
+</button>
+      <ul className={`NavBar__menu ${menuOpen ? "open" : ""}`}>
+        <li>
+          <button className="NavBar__button" onClick={() => handleNavigation("home")}>Home</button>
+        </li>
+        <li>
+          <button className="NavBar__button" onClick={() => handleNavigation("quem-somos")}>Quem Somos</button>
+        </li>
+        <li>
+          <button className="NavBar__button" onClick={() => handleNavigation("contato")}>Contato</button>
+        </li>
+        <li>
+          <Link className="NavBar__button" to="/localizacao">Localização</Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
