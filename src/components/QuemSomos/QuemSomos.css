@@ -13,7 +13,7 @@
     font-family: "Inter";
     font-size: 40px;
   }
-  /* Container branco com conteúdo */
+
   .QuemSomos__container {
     background-color: #fff;
     color: #000;
@@ -28,7 +28,6 @@
     flex-wrap: wrap; /* garante boa responsividade */
   }
   
-  /* Texto alinhado à esquerda */
   .QuemSomos__subtitle {
     font-family: "Inter";
     font-size: 32px;
@@ -43,11 +42,17 @@
     text-align: left;
   }
   
-  /* Imagem à direita com bordas arredondadas */
+  
   .QuemSomos__image {
     width: 300px;
     height: 300px;
     object-fit: cover;
     border-radius: 20px;
-    background-color: #ccc; /* apenas como placeholder */
+    background-color: #ccc; 
+  }
+  @media (max-width: 768px) {
+    .QuemSomos__image {
+      margin: 0 auto; 
+      display: block; 
+    }
   }
