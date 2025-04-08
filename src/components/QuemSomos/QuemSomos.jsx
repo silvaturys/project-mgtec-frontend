@@ -1,5 +1,5 @@
 import React from "react";
-
+import foto from "../../images/fotodaequipe.jpg"
 function QuemSomos() {
   return (
     <section id="quem-somos" className="QuemSomos">
@@ -16,7 +16,10 @@ function QuemSomos() {
                 Nosso foco é tecnologia que facilita o dia a dia, com projetos 
                 pensados ​​para cada cliente.
             </p>
-            <image className="QuemSomos__image"></image>
+            <img
+            alt="foto da equipe da empresa mgtec"
+            className="QuemSomos__image" 
+            src={foto}/>
         </div>
     </section>
     );
