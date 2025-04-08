@@ -9,6 +9,8 @@ Contato: Informações para que os clientes entrem em contato via email, WhatsAp
 
 Localização: Uma página separada que exibe, por meio de um mapa interativo, a localização da loja (endereço: Rua Humaitá 258, CEP 88070730), consumindo a API do Google Maps.
 
+
+
 Funcionalidades
 Navegação interna: As seções Home, Quem Somos e Contato estão na mesma página com scroll suave.
 
@@ -20,10 +22,10 @@ Integração com Google Maps: Uso de um iframe com a API do Google Maps, configu
 
 Layout Responsivo: O design se adapta tanto para desktop quanto para dispositivos móveis.
 
+
+
+
 Estrutura do Projeto
-plaintext
-Copiar
-Editar
 projeto-mgtec/
 ├── node_modules/
 ├── public/
@@ -35,37 +37,26 @@ projeto-mgtec/
     ├── Utils/            # Arquivos utilitários (ex.: api.js com a chave do Google Maps)
     ├── Vendor/           # Arquivos de terceiros, se houver
     └── index.jsx         # Entrada principal do React
+
+
+
 Pré-requisitos
 Node.js: Versão 14 ou superior.
-
 npm ou yarn: Gerenciador de pacotes.
-
 Google Maps API Key: Configure a sua chave no arquivo src/Utils/api.js.
+
+
+
+
 
 Instalação e Execução
 Clone o repositório:
-
-bash
-Copiar
-Editar
 git clone https://github.com/seu-usuario/projeto-mgtec.git
 Acesse o diretório do projeto:
-
-bash
-Copiar
-Editar
 cd projeto-mgtec
 Instale as dependências:
-
-bash
-Copiar
-Editar
 npm install
 Inicie o projeto:
-
-bash
-Copiar
-Editar
 npm run dev
 Acesse: Abra o navegador e vá para http://localhost:5173/ (ou a porta que o Vite indicar).
 
@@ -79,6 +70,8 @@ Endereço configurado: O endereço "Rua Humaitá 258, CEP 88070730" é enviado p
 Chave da API: A chave é importada do arquivo src/Utils/api.js.
 
 Você pode usar este componente como base e futuramente expandir a funcionalidade, por exemplo, para exibir dados adicionais ou incluir um infowindow no mapa.
+
+
 
 Possíveis Customizações Futuras
 Vídeo de Fundo: Substituir a imagem da seção Home por um vídeo.
